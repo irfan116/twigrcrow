@@ -80,7 +80,7 @@ TwigBridge's configuration file can be extended in your ConfigServiceProvider, u
 You _should_ use Artisan to copy the default configuration file from the `/vendor` directory to `/config/twigbridge.php` with the following command:
 
 ```bash
-php artisan vendor:publish --provider="TwigBridge\ServiceProvider"
+php artisan vendor:publish --provider="twigrcrow\ServiceProvider"
 ```
 
 If you make changes to the `/config/twigbridge.php` file you will most likely have to run the `twig:clean` Artisan command for the changes to take effect.
