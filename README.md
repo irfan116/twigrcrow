@@ -1,8 +1,5 @@
 Allows you to use [Twig](http://twig.sensiolabs.org/) seamlessly in [Laravel 5](http://laravel.com/).
 
-[![Latest Stable Version](https://poser.pugx.org/rcrowe/twigbridge/v/stable.png)](https://packagist.org/packages/rcrowe/twigbridge)
-[![Total Downloads](https://poser.pugx.org/rcrowe/twigbridge/downloads.png)](https://packagist.org/packages/rcrowe/twigbridge)
-[![License](https://poser.pugx.org/rcrowe/twigbridge/license.png)](https://packagist.org/packages/rcrowe/twigbridge)
 
 # Requirements
 
@@ -15,7 +12,7 @@ If you need to support for Laravel 4.1/4.2 checkout out TwigBridge 0.6.x, or 0.5
 Require this package with Composer
 
 ```bash
-composer require rcrowe/twigbridge
+composer require irfan116/twigrcrow
 ```
 
 # Quick Start
@@ -25,7 +22,7 @@ Once Composer has installed or updated your packages you need to register TwigBr
 ```php
 'providers' => [
      ...
-                TwigBridge\ServiceProvider::class,
+                twigrcrow\ServiceProvider::class,
 ],
 ```
 
@@ -34,14 +31,14 @@ Now find the alliases key, again towards the end of the file, and add 'Twig' => 
 ```php
 'aliases' => [
     ... 
-                'Twig' => TwigBridge\Facade\Twig::class,
+                'Twig' => twigrcrow\Facade\Twig::class,
 ],
 ```
 
 Now that you have both of those lines added to config/app.php we will use Artisan to add the new twig config file:
 
 ```php
-php artisan vendor:publish --provider="TwigBridge\ServiceProvider"
+php artisan vendor:publish --provider="twigrcrow\ServiceProvider"
 ```
 
 At this point you can now begin using twig like you would any other view
@@ -64,17 +61,17 @@ resources/views/hello.twig
 Once Composer has installed or updated your packages you need to register TwigBridge with Laravel itself. Open up config/app.php and find the providers key towards the bottom and add:
 
 ```php
-'TwigBridge\ServiceProvider',
+'twigrcrow\ServiceProvider',
 ```
 
 You can add the TwigBridge Facade, to have easier access to the TwigBridge (or Twig_Environment).
 
 ```php
-'Twig' => 'TwigBridge\Facade\Twig',
+'Twig' => 'twigrcrow\Facade\Twig',
 ```
 
 ```php
-Twig::addExtension('TwigBridge\Extension\Loader\Functions');
+Twig::addExtension('twigrcrow\Extension\Loader\Functions');
 Twig::render('mytemplate', $data);
 ```
 
@@ -94,8 +91,8 @@ For Lumen, you need to load the same Service Provider, but you have to disable t
 Copy the `config/twigbridge.php` file to your local `config` folder and register the configuration + Service Provider in `bootstrap/app.php`:
 
 ```php
-$app->configure('twigbridge'); 
-$app->register('TwigBridge\ServiceProvider');
+$app->configure('twigrcrow'); 
+$app->register('twigrcrow\ServiceProvider');
 ```
 
 # Usage
@@ -140,7 +137,7 @@ Sometimes you want to extend / add new functions for use in Twig templates. Add 
 
 ```php
 'enabled' => array(
-    'TwigBridge\Extensions\Example'
+    'twigrcrow\Extensions\Example'
 )
 ```
 
@@ -160,19 +157,19 @@ TwigBridge supports both a string or a closure as a callback, so for example you
 TwigBridge comes with the following extensions enabled by default:
 
 - [Twig_Extension_Debug](http://twig.sensiolabs.org/doc/extensions/debug.html)
-- TwigBridge\Extension\Laravel\Auth
-- TwigBridge\Extension\Laravel\Config
-- TwigBridge\Extension\Laravel\Dump
-- TwigBridge\Extension\Laravel\Form
-- TwigBridge\Extension\Laravel\Html
-- TwigBridge\Extension\Laravel\Input
-- TwigBridge\Extension\Laravel\Session
-- TwigBridge\Extension\Laravel\String
-- TwigBridge\Extension\Laravel\Translator
-- TwigBridge\Extension\Laravel\Url
-- TwigBridge\Extension\Loader\Facades
-- TwigBridge\Extension\Loader\Filters
-- TwigBridge\Extension\Loader\Functions
+- twigrcrow\Extension\Laravel\Auth
+- twigrcrow\Extension\Laravel\Config
+- twigrcrow\Extension\Laravel\Dump
+- twigrcrow\Extension\Laravel\Form
+- twigrcrow\Extension\Laravel\Html
+- twigrcrow\Extension\Laravel\Input
+- twigrcrow\Extension\Laravel\Session
+- twigrcrow\Extension\Laravel\String
+- twigrcrow\Extension\Laravel\Translator
+- twigrcrow\Extension\Laravel\Url
+- twigrcrow\Extension\Loader\Facades
+- twigrcrow\Extension\Loader\Filters
+- twigrcrow\Extension\Loader\Functions
 
 To enable '0.5.x' style Facades, enable the Legacy Facades extension:
 - TwigBridge\Extension\Laravel\Legacy\Facades
@@ -219,7 +216,7 @@ Global variables:
 
 # Artisan Commands
 
-TwigBridge offers a command for CLI Interaction.
+twigrcrow offers a command for CLI Interaction.
 
 Empty the Twig cache:
 ```
