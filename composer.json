@@ -32,8 +32,8 @@
     },
     "autoload": {
         "psr-4": {
-            "TwigBridge\\": "src",
-            "TwigBridge\\Tests\\": "tests"
+            "twigrcrow\\": "src",
+            "twigrcrow\\Tests\\": "tests"
         }
     },
     "extra": {
