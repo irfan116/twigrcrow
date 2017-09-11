@@ -3,7 +3,7 @@ Allows you to use [Twig](http://twig.sensiolabs.org/) seamlessly in [Laravel 5](
 
 # Requirements
 
-TwigBridge >=0.7 requires Laravel 5.
+Twigrcrow >=0.7 requires Laravel 5.
 
 If you need to support for Laravel 4.1/4.2 checkout out TwigBridge 0.6.x, or 0.5.x for Laravel 4.0.
 
@@ -26,7 +26,7 @@ Once Composer has installed or updated your packages you need to register TwigBr
 ],
 ```
 
-Now find the alliases key, again towards the end of the file, and add 'Twig' => 'TwigBridge\Facade\Twig', to have easier access to the TwigBridge (or Twig_Environment):
+Now find the alliases key, again towards the end of the file, and add 'Twig' => 'twigrcrow\Facade\Twig', to have easier access to the Twigrcrow (or Twig_Environment):
 
 ```php
 'aliases' => [
@@ -64,7 +64,7 @@ Once Composer has installed or updated your packages you need to register TwigBr
 'twigrcrow\ServiceProvider',
 ```
 
-You can add the TwigBridge Facade, to have easier access to the TwigBridge (or Twig_Environment).
+You can add the TwigBridge Facade, to have easier access to the Twigrcrow (or Twig_Environment).
 
 ```php
 'Twig' => 'twigrcrow\Facade\Twig',
@@ -75,7 +75,7 @@ Twig::addExtension('twigrcrow\Extension\Loader\Functions');
 Twig::render('mytemplate', $data);
 ```
 
-TwigBridge's configuration file can be extended in your ConfigServiceProvider, under the `twigbridge` key. You can find the default configuration file at `vendor/rcrowe/twigbridge/config`.  
+Twigrcrow's configuration file can be extended in your ConfigServiceProvider, under the `twigrcrow` key. You can find the default configuration file at `vendor/rcrowe/twigbridge/config`.
 
 You _should_ use Artisan to copy the default configuration file from the `/vendor` directory to `/config/twigbridge.php` with the following command:
 
@@ -154,7 +154,7 @@ TwigBridge supports both a string or a closure as a callback, so for example you
 ]
 ```
 
-TwigBridge comes with the following extensions enabled by default:
+Twigrcrow comes with the following extensions enabled by default:
 
 - [Twig_Extension_Debug](http://twig.sensiolabs.org/doc/extensions/debug.html)
 - twigrcrow\Extension\Laravel\Auth
@@ -172,7 +172,7 @@ TwigBridge comes with the following extensions enabled by default:
 - twigrcrow\Extension\Loader\Functions
 
 To enable '0.5.x' style Facades, enable the Legacy Facades extension:
-- TwigBridge\Extension\Laravel\Legacy\Facades
+- Twigrcrow\Extension\Laravel\Legacy\Facades
 
 
 ## FilterLoader and FunctionLoader
